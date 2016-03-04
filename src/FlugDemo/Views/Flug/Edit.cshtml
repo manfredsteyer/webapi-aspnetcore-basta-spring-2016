@@ -1,0 +1,44 @@
+﻿@model FlugDemo.Models.Flug
+
+<h1>Detailansicht</h1>
+
+<form asp-controller="Flug" asp-action="Edit">
+
+
+    @if(!string.IsNullOrEmpty(ViewBag.Message)) {
+        <div>
+            @ViewBag.Message
+        </div>
+    }
+
+    <div class="form-group">
+        <label>Id</label>
+        <input asp-for="Id" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>AblugOrt</label>
+        <input asp-for="AblugOrt" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>ZielOrt</label>
+        <input asp-for="ZielOrt" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Datum</label>
+        <input asp-for="Datum" class="form-control" />
+
+    </div>
+
+    <div class="form-group">
+        <label>FlugNr</label>
+        <input asp-for="FlugNr" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-default" />
+    </div>
+
+</form>

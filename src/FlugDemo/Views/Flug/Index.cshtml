@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FlugDemo.Models.Flug>
+<h1>Flüge</h1>
+<table class="table table-striped">
+    @foreach (var flug in Model)
+    {
+        <tr>
+            <td>@flug.Id</td>
+            <td>@flug.FlugNr</td>
+            <td>@flug.AblugOrt</td>
+            <td>@flug.ZielOrt</td>
+            <td>@flug.Datum</td>
+            <td><a asp-controller="Flug" asp-action="Edit" asp-route-id="@flug.Id">Edit</a></td>
+        </tr>
+    }
+</table>
+
+@section infos {
+    (c) Manfred Steyer, 2016
+}
